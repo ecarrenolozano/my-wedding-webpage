@@ -109,4 +109,9 @@ export const en: Dictionary = {
     backendNotConfigured:
       "The form is not connected to the database yet. Configure Supabase to store real responses.",
   },
+  footer: {
+    note:
+      "This site was created with love, intention, and great excitement to share our celebration with you.",
+    credit: "Created by Camila & Edwin · Crafted together, detail by detail, 2026.",
+  },
 };

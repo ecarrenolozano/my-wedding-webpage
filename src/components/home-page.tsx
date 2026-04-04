@@ -7,6 +7,7 @@ import { useState } from "react";
 
 import { EventOverviewSection } from "@/components/sections/event-overview-section";
 import { FaqSection } from "@/components/sections/faq-section";
+import { FooterSection } from "@/components/sections/footer-section";
 import { HeroSection } from "@/components/sections/hero-section";
 import { InvitationIntro } from "@/components/sections/invitation-intro";
 import { PhotoStrip } from "@/components/sections/photo-strip";
@@ -79,6 +80,8 @@ export function HomePage() {
           <FaqSection dictionary={dictionary} locale={locale} />
           <RsvpSection dictionary={dictionary} locale={locale} />
         </div>
+
+        <FooterSection dictionary={dictionary} />
       </motion.main>
     </div>
   );

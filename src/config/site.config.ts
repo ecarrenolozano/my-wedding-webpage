@@ -89,7 +89,7 @@ export const siteConfig: SiteConfig = {
         venue: "Casa de Ejercicios de San Ignacio",
         address: "Cl 15 #15, Pasto, Nariño, Colombia",
         directionsUrl:
-          "https://www.google.com/maps/dir/?api=1&origin=Cra+24+%2319-53%2C+Pasto%2C+Narino%2C+Colombia&destination=Casa+de+Ejercicios+de+San+Ignacio%2C+Cl+15+%2315%2C+Pasto%2C+Narino%2C+Colombia&travelmode=driving",
+          "https://www.google.com/maps/dir/?api=1&destination=Casa+de+Ejercicios+de+San+Ignacio%2C+Cl+15+%2315%2C+Pasto%2C+Narino%2C+Colombia&travelmode=driving",
         calendarUrl:
           "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Ceremonia+-+Camila+y+Edwin&dates=20261010T203000Z/20261010T223000Z&details=Boda+de+Camila+y+Edwin&location=Casa+de+Ejercicios+de+San+Ignacio%2C+Cl+15+%2315%2C+Pasto%2C+Narino%2C+Colombia",
         image: {
@@ -104,7 +104,7 @@ export const siteConfig: SiteConfig = {
         venue: "Hotel V1501",
         address: "Cl 20 #33-60, Pasto, Nariño, Colombia",
         directionsUrl:
-          "https://www.google.com/maps/dir/?api=1&origin=Cra+24+%2319-53%2C+Pasto%2C+Narino%2C+Colombia&destination=Hotel+V1501%2C+Cl+20+%2333-60%2C+Pasto%2C+Narino%2C+Colombia&travelmode=driving",
+          "https://www.google.com/maps/dir/?api=1&destination=Hotel+V1501%2C+Cl+20+%2333-60%2C+Pasto%2C+Narino%2C+Colombia&travelmode=driving",
         calendarUrl:
           "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Recepcion+-+Camila+y+Edwin&dates=20261010T230000Z/20261011T070000Z&details=Boda+de+Camila+y+Edwin&location=Hotel+V1501%2C+Cl+20+%2333-60%2C+Pasto%2C+Narino%2C+Colombia",
         image: {

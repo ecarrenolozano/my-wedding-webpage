@@ -110,4 +110,9 @@ export const es: Dictionary = {
     backendNotConfigured:
       "El formulario aún no está conectado a la base de datos. Configura Supabase para guardar respuestas reales.",
   },
+  footer: {
+    note:
+      "Este sitio fue creado con amor, intención y mucha ilusión para compartir nuestra celebración con ustedes.",
+    credit: "Creado por Camila & Edwin · Hecho juntos, detalle a detalle, 2026.",
+  },
 };

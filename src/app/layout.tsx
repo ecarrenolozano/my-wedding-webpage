@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import type { ReactNode } from "react";
 
 import "@/app/globals.css";
+import { assetUrl } from "@/lib/assets";
 
 const stylishCalligraphy = localFont({
   src: "./fonts/StylishCalligraphyDemo-XPZZ.ttf",
@@ -27,6 +28,11 @@ const cormorantGaramond = Cormorant_Garamond({
 export const metadata: Metadata = {
   title: "Boda Wedding Page",
   description: "Premium wedding website starter with bilingual support.",
+  icons: {
+    icon: assetUrl("favicon.png"),
+    shortcut: assetUrl("favicon.png"),
+    apple: assetUrl("favicon.png"),
+  },
 };
 
 type RootLayoutProps = {

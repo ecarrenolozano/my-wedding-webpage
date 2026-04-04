@@ -100,6 +100,10 @@ export type Dictionary = {
     submissionError: string;
     backendNotConfigured: string;
   };
+  footer: {
+    note: string;
+    credit: string;
+  };
 };
 
 export type ScheduleItem = {
