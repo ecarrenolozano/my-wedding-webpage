@@ -88,13 +88,13 @@ export const siteConfig: SiteConfig = {
           es: "Ceremonia",
           en: "Ceremony",
         },
-        time: "15:30",
+        time: "15:30 - 16:30",
         venue: "Casa de Ejercicios de San Ignacio",
         address: "Cl 15 #15, Pasto, Nariño, Colombia",
         directionsUrl:
           "https://www.google.com/maps/dir/?api=1&destination=Casa+de+Ejercicios+de+San+Ignacio%2C+Cl+15+%2315%2C+Pasto%2C+Narino%2C+Colombia&travelmode=driving",
         calendarUrl:
-          "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Ceremonia+-+Camila+y+Edwin&dates=20261010T203000Z/20261010T223000Z&details=Boda+de+Camila+y+Edwin&location=Casa+de+Ejercicios+de+San+Ignacio%2C+Cl+15+%2315%2C+Pasto%2C+Narino%2C+Colombia",
+          "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Ceremonia+-+Camila+y+Edwin&dates=20261010T203000Z/20261010T213000Z&details=Ceremonia+de+la+boda+de+Camila+y+Edwin.+10+de+octubre+de+2026,+15%3A30+-+16%3A30.&location=Casa+de+Ejercicios+de+San+Ignacio%2C+Cl+15+%2315%2C+Pasto%2C+Narino%2C+Colombia",
         image: {
           src: assetUrl("casa-ignacio.jpg"),
           alt: "Exterior view of Casa de Ejercicios de San Ignacio",
@@ -112,7 +112,7 @@ export const siteConfig: SiteConfig = {
         directionsUrl:
           "https://www.google.com/maps/dir/?api=1&destination=Hotel+V1501%2C+Cl+20+%2333-60%2C+Pasto%2C+Narino%2C+Colombia&travelmode=driving",
         calendarUrl:
-          "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Recepcion+-+Camila+y+Edwin&dates=20261010T230000Z/20261011T070000Z&details=Boda+de+Camila+y+Edwin&location=Hotel+V1501%2C+Cl+20+%2333-60%2C+Pasto%2C+Narino%2C+Colombia",
+          "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Recepcion+-+Camila+y+Edwin&dates=20261010T230000Z/20261011T070000Z&details=Recepcion+de+la+boda+de+Camila+y+Edwin.+10+de+octubre+de+2026,+18%3A00+-+02%3A00.&location=Hotel+V1501%2C+Cl+20+%2333-60%2C+Pasto%2C+Narino%2C+Colombia",
         image: {
           src: assetUrl("hotel-v1501.jpg"),
           alt: "Exterior view of Hotel V1501 in Pasto",

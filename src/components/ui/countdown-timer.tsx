@@ -118,16 +118,16 @@ export function CountdownTimer({
         {dictionary.hero.countdownLabel}
       </p>
 
-      <div className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-5">
+      <div className="mt-4 grid grid-cols-5 gap-1.5 sm:gap-3">
         {items.map((item) => (
           <div
             key={item.label}
-            className="rounded-[0.85rem] border border-[color:var(--color-accent)]/18 bg-[rgba(255,251,247,0.6)] px-3 py-4 text-center shadow-[0_8px_20px_rgba(140,103,78,0.05)]"
+            className="min-w-0 rounded-[0.8rem] border border-[color:var(--color-accent)]/18 bg-[rgba(255,251,247,0.6)] px-1.5 py-2.5 text-center shadow-[0_8px_20px_rgba(140,103,78,0.05)] sm:rounded-[0.85rem] sm:px-3 sm:py-4"
           >
-            <p className="text-[1.42rem] leading-none text-[color:var(--color-wine)] sm:text-[1.72rem]">
+            <p className="text-[0.94rem] leading-none text-[color:var(--color-wine)] sm:text-[1.72rem]">
               {String(item.value).padStart(2, "0")}
             </p>
-            <p className="meta-label mt-2 text-[color:var(--color-accent)]/75">
+            <p className="mt-1.5 text-[0.45rem] leading-[1.12] tracking-[0.08em] text-[color:var(--color-accent)]/75 whitespace-normal break-words uppercase sm:meta-label sm:mt-2 sm:text-inherit">
               {item.label}
             </p>
           </div>
