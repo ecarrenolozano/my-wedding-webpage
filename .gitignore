@@ -25,4 +25,9 @@ pnpm-debug.log*
 *.tsbuildinfo
 next-env.d.ts
 
+# local assets
 planning/*
+
+# agents
+.codex
+.claude
