@@ -3,7 +3,6 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { FormEvent, useEffect, useMemo, useRef, useState } from "react";
 
-import { siteConfig } from "@/config/site.config";
 import type { RsvpSubmission } from "@/types/rsvp";
 import type { Dictionary, Locale } from "@/types/site";
 
@@ -285,10 +284,7 @@ export function RsvpSection({ dictionary, locale }: RsvpSectionProps) {
       id="rsvp"
     >
       <div className="h-px w-full bg-[color:var(--color-accent)]/35" />
-      <p className="section-label mt-14 text-[color:var(--color-accent)]">
-        {dictionary.sections.rsvpLabel}
-      </p>
-      <h2 className="section-title mt-4 font-serif text-[color:var(--color-foreground)]">
+      <h2 className="section-title mt-14 font-serif text-[color:var(--color-foreground)]">
         {dictionary.sections.rsvpHeading}
       </h2>
       <p className="section-intro mt-8 max-w-2xl text-stone-700">
@@ -310,15 +306,6 @@ export function RsvpSection({ dictionary, locale }: RsvpSectionProps) {
               {dictionary.rsvp.introDescription}
             </p>
           ) : null}
-          <div className="mt-6 rounded-[1.25rem] bg-[#f6ece4] p-5 text-center">
-            <p className="section-label text-[color:var(--color-accent)]">
-              {siteConfig.event.rsvp.deadlineLabel}
-            </p>
-            <p className="body-elegant mt-4 text-stone-700">
-              {siteConfig.event.rsvp.contactLine}
-            </p>
-          </div>
-
           <div className="mt-6 flex flex-wrap gap-3">
             {stepTitles.map((title, index) => {
               const itemStep = index + 1;
