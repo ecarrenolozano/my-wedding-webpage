@@ -12,7 +12,6 @@ export const es: Dictionary = {
     primaryCta: "Confirmar asistencia",
     secondaryCta: "Ver detalles",
     countdownLabel: "Cuenta regresiva",
-    yearsLabel: "Años",
     monthsLabel: "Meses",
     daysLabel: "Días",
     hoursLabel: "Horas",

@@ -10,7 +10,6 @@ type CountdownTimerProps = {
 };
 
 type CountdownParts = {
-  years: number;
   months: number;
   days: number;
   hours: number;
@@ -24,7 +23,6 @@ function getCountdownParts(targetDate: string): CountdownParts {
 
   if (target <= now) {
     return {
-      years: 0,
       months: 0,
       days: 0,
       hours: 0,
@@ -67,8 +65,7 @@ function getCountdownParts(targetDate: string): CountdownParts {
   }
 
   return {
-    years: Math.max(0, years),
-    months: Math.max(0, months),
+    months: Math.max(0, years * 12 + months),
     days: Math.max(0, days),
     hours: Math.max(0, hours),
     minutes: Math.max(0, minutes),
@@ -93,10 +90,6 @@ export function CountdownTimer({
   }, [targetDate]);
 
   const items = [
-    {
-      label: dictionary.hero.yearsLabel,
-      value: countdown.years,
-    },
     {
       label: dictionary.hero.monthsLabel,
       value: countdown.months,
@@ -125,7 +118,7 @@ export function CountdownTimer({
         {dictionary.hero.countdownLabel}
       </p>
 
-      <div className="mt-4 grid grid-cols-3 gap-3 sm:grid-cols-6">
+      <div className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-5">
         {items.map((item) => (
           <div
             key={item.label}

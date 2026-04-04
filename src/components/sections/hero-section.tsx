@@ -38,7 +38,7 @@ export function HeroSection({
 
           <div className="absolute left-[7%] top-1/2 hidden h-[400px] w-[300px] -translate-y-1/2 border border-[color:var(--color-accent)]/35 md:block lg:h-[430px] lg:w-[330px]" />
 
-          <div className="relative flex max-w-[920px] flex-col items-start pt-18 text-left md:pl-[12%] lg:pl-[15%]">
+          <div className="relative flex max-w-[920px] flex-col items-center pt-18 text-center md:items-start md:text-left md:pl-[12%] lg:pl-[15%]">
             <p className="eyebrow-text text-[color:var(--color-accent)]">
               {dictionary.hero.eyebrow}
             </p>

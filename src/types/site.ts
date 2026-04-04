@@ -14,7 +14,6 @@ export type Dictionary = {
     primaryCta: string;
     secondaryCta: string;
     countdownLabel: string;
-    yearsLabel: string;
     monthsLabel: string;
     daysLabel: string;
     hoursLabel: string;
@@ -108,7 +107,7 @@ export type Dictionary = {
 
 export type ScheduleItem = {
   id: string;
-  title: string;
+  title: LocalizedText;
   subtitle?: string;
   time: string;
   venue: string;

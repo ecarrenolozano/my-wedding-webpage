@@ -12,7 +12,6 @@ export const en: Dictionary = {
     primaryCta: "RSVP now",
     secondaryCta: "View details",
     countdownLabel: "Countdown",
-    yearsLabel: "Years",
     monthsLabel: "Months",
     daysLabel: "Days",
     hoursLabel: "Hours",

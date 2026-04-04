@@ -84,7 +84,10 @@ export const siteConfig: SiteConfig = {
     schedule: [
       {
         id: "ceremony",
-        title: "Ceremonia",
+        title: {
+          es: "Ceremonia",
+          en: "Ceremony",
+        },
         time: "15:30",
         venue: "Casa de Ejercicios de San Ignacio",
         address: "Cl 15 #15, Pasto, Nariño, Colombia",
@@ -99,7 +102,10 @@ export const siteConfig: SiteConfig = {
       },
       {
         id: "reception",
-        title: "Recepcion",
+        title: {
+          es: "Recepción",
+          en: "Reception",
+        },
         time: "18:00 - 02:00",
         venue: "Hotel V1501",
         address: "Cl 20 #33-60, Pasto, Nariño, Colombia",

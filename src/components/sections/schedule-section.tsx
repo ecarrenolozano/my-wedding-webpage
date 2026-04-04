@@ -36,7 +36,7 @@ export function ScheduleSection({ dictionary, locale }: ScheduleSectionProps) {
               </p>
 
               <h3 className="subsection-title mt-4 font-serif text-stone-800">
-                {item.title}
+                {item.title[locale]}
               </h3>
               {item.subtitle ? (
                 <p className="mt-2 text-base text-[color:var(--color-accent)]">
