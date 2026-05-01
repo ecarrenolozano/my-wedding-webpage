@@ -14,8 +14,7 @@ import { PhotoStrip } from "@/components/sections/photo-strip";
 import { RsvpSection } from "@/components/sections/rsvp-section";
 import { ScheduleSection } from "@/components/sections/schedule-section";
 import { siteConfig } from "@/config/site.config";
-import { defaultLocale, getDictionary } from "@/lib/i18n";
-import type { Locale } from "@/types/site";
+import type { Dictionary, HomePageContent, Locale } from "@/types/site";
 
 const SESSION_KEY = "boda-invitation-opened";
 
@@ -23,11 +22,15 @@ function subscribeToNothing() {
   return () => {};
 }
 
-export function HomePage() {
-  const [locale, setLocale] = useState<Locale>(defaultLocale);
+type HomePageProps = {
+  content: HomePageContent;
+  dictionary: Dictionary;
+  locale: Locale;
+};
+
+export function HomePage({ content, dictionary, locale }: HomePageProps) {
   const [isIntroDismissed, setIsIntroDismissed] = useState(false);
   const prefersReducedMotion = useReducedMotion();
-  const dictionary = getDictionary(locale);
   const hasSeenInvitation = useSyncExternalStore(
     subscribeToNothing,
     () => window.sessionStorage.getItem(SESSION_KEY) === "true",
@@ -68,20 +71,20 @@ export function HomePage() {
         transition={{ duration: 0.55, ease: "easeOut" }}
       >
         <HeroSection
+          content={content}
           dictionary={dictionary}
           locale={locale}
-          onLocaleChange={setLocale}
         />
 
         <div className="mx-auto mt-14 flex w-full max-w-6xl flex-col gap-14">
           <PhotoStrip />
-          <EventOverviewSection dictionary={dictionary} locale={locale} />
-          <ScheduleSection dictionary={dictionary} locale={locale} />
-          <FaqSection dictionary={dictionary} locale={locale} />
-          <RsvpSection dictionary={dictionary} locale={locale} />
+          <EventOverviewSection content={content} locale={locale} />
+          <ScheduleSection content={content} dictionary={dictionary} locale={locale} />
+          <FaqSection content={content} locale={locale} />
+          <RsvpSection content={content} dictionary={dictionary} locale={locale} />
         </div>
 
-        <FooterSection dictionary={dictionary} />
+        <FooterSection content={content} />
       </motion.main>
     </div>
   );

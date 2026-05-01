@@ -4,9 +4,10 @@ import { AnimatePresence, motion } from "framer-motion";
 import { FormEvent, useEffect, useMemo, useRef, useState } from "react";
 
 import type { RsvpSubmission } from "@/types/rsvp";
-import type { Dictionary, Locale } from "@/types/site";
+import type { Dictionary, HomePageContent, Locale } from "@/types/site";
 
 type RsvpSectionProps = {
+  content: HomePageContent;
   dictionary: Dictionary;
   locale: Locale;
 };
@@ -66,7 +67,11 @@ const phoneCountryOptions = [
   { code: "+81", country: "Japan", flag: "🇯🇵" },
 ];
 
-export function RsvpSection({ dictionary, locale }: RsvpSectionProps) {
+export function RsvpSection({
+  content,
+  dictionary,
+  locale,
+}: RsvpSectionProps) {
   const [step, setStep] = useState<Step>(1);
   const [formState, setFormState] = useState<FormState>(initialFormState);
   const [errorMessage, setErrorMessage] = useState("");
@@ -285,7 +290,7 @@ export function RsvpSection({ dictionary, locale }: RsvpSectionProps) {
     >
       <div className="h-px w-full bg-[color:var(--color-accent)]/35" />
       <h2 className="section-title mt-14 font-serif text-[color:var(--color-foreground)]">
-        {dictionary.sections.rsvpHeading}
+        {content.sections.rsvpHeading}
       </h2>
       <p className="section-intro mt-8 max-w-2xl text-stone-700">
         {dictionary.rsvp.entryDescription}

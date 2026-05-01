@@ -2,19 +2,15 @@ import { CountdownTimer } from "@/components/ui/countdown-timer";
 import { LanguageSwitcher } from "@/components/ui/language-switcher";
 import { siteConfig } from "@/config/site.config";
 import { assetUrl } from "@/lib/assets";
-import type { Dictionary, Locale } from "@/types/site";
+import type { Dictionary, HomePageContent, Locale } from "@/types/site";
 
 type HeroSectionProps = {
   dictionary: Dictionary;
+  content: HomePageContent;
   locale: Locale;
-  onLocaleChange: (locale: Locale) => void;
 };
 
-export function HeroSection({
-  dictionary,
-  locale,
-  onLocaleChange,
-}: HeroSectionProps) {
+export function HeroSection({ dictionary, content, locale }: HeroSectionProps) {
   const names = `${siteConfig.couple.partnerOne} & ${siteConfig.couple.partnerTwo}`;
 
   return (
@@ -32,7 +28,6 @@ export function HeroSection({
             <LanguageSwitcher
               label={dictionary.nav.languageLabel}
               locale={locale}
-              onChange={onLocaleChange}
             />
           </div>
 
@@ -40,7 +35,7 @@ export function HeroSection({
 
           <div className="relative flex max-w-[920px] flex-col items-center pt-18 text-center md:items-start md:text-left md:pl-[12%] lg:pl-[15%]">
             <p className="eyebrow-text text-[color:var(--color-accent)]">
-              {dictionary.hero.eyebrow}
+              {content.hero.eyebrow}
             </p>
 
             <h1 className="hero-script mt-8 text-[color:var(--color-foreground)]">
@@ -48,7 +43,7 @@ export function HeroSection({
             </h1>
 
             <p className="hero-message mt-7 max-w-[42rem] text-[color:var(--color-clay)]">
-              {dictionary.hero.description}
+              {content.hero.description}
             </p>
 
             <p className="date-display mt-6 text-[color:var(--color-wine)]">
@@ -56,16 +51,24 @@ export function HeroSection({
             </p>
 
             <CountdownTimer
-              dictionary={dictionary}
+              heroContent={content.hero}
               targetDate={siteConfig.event.dateTimeISO}
             />
 
-            <a
-              className="btn-action btn-action-soft btn-action-lg mt-8"
-              href="#rsvp"
-            >
-              {dictionary.hero.primaryCta}
-            </a>
+            <div className="mt-8 flex flex-wrap items-center gap-3">
+              <a
+                className="btn-action btn-action-soft btn-action-lg"
+                href="#rsvp"
+              >
+                {content.hero.primaryCta}
+              </a>
+              <a
+                className="btn-action btn-action-soft btn-action-lg"
+                href={`/${locale}/ubicacion-y-hospedaje`}
+              >
+                {content.hero.secondaryCta}
+              </a>
+            </div>
           </div>
         </div>
       </div>

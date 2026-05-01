@@ -4,14 +4,14 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 
 import { siteConfig } from "@/config/site.config";
-import type { Dictionary, Locale } from "@/types/site";
+import type { HomePageContent, Locale } from "@/types/site";
 
 type FaqSectionProps = {
-  dictionary: Dictionary;
+  content: HomePageContent;
   locale: Locale;
 };
 
-export function FaqSection({ dictionary, locale }: FaqSectionProps) {
+export function FaqSection({ content, locale }: FaqSectionProps) {
   const [openItemId, setOpenItemId] = useState<string | null>(
     siteConfig.event.faq[0]?.id ?? null,
   );
@@ -20,7 +20,7 @@ export function FaqSection({ dictionary, locale }: FaqSectionProps) {
     <section className="mx-auto flex w-full max-w-4xl flex-col px-6 text-left">
       <div className="h-px w-full bg-[color:var(--color-accent)]/35" />
       <h2 className="section-title mt-14 font-serif text-[color:var(--color-foreground)]">
-        {dictionary.sections.faqHeading}
+        {content.sections.faqHeading}
       </h2>
 
       <div className="mt-12 divide-y divide-[color:var(--color-accent)]/18">

@@ -87,12 +87,12 @@ export default async function AdminResponsesPage() {
             >
               Nueva respuesta
             </Link>
-            <a
+            <Link
               className="btn-action btn-action-soft btn-action-md"
               href="/admin/respuestas/export"
             >
               Exportar CSV
-            </a>
+            </Link>
             <Link
               className="btn-action btn-action-soft btn-action-md"
               href="/admin/cerrar-sesion"

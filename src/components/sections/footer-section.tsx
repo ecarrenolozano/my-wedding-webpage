@@ -1,11 +1,11 @@
 import { siteConfig } from "@/config/site.config";
-import type { Dictionary } from "@/types/site";
+import type { HomePageContent } from "@/types/site";
 
 type FooterSectionProps = {
-  dictionary: Dictionary;
+  content: HomePageContent;
 };
 
-export function FooterSection({ dictionary }: FooterSectionProps) {
+export function FooterSection({ content }: FooterSectionProps) {
   const names = `${siteConfig.couple.partnerOne} & ${siteConfig.couple.partnerTwo}`;
 
   return (
@@ -17,10 +17,10 @@ export function FooterSection({ dictionary }: FooterSectionProps) {
           {names}
         </p>
         <p className="body-elegant mt-5 text-stone-700">
-          {dictionary.footer.note}
+          {content.footer.note}
         </p>
         <p className="meta-label mt-6 text-[color:var(--color-accent)]">
-          {dictionary.footer.credit}
+          {content.footer.credit}
         </p>
       </div>
     </footer>

@@ -2,10 +2,10 @@
 
 import { useEffect, useState } from "react";
 
-import type { Dictionary } from "@/types/site";
+import type { HomePageContent } from "@/types/site";
 
 type CountdownTimerProps = {
-  dictionary: Dictionary;
+  heroContent: HomePageContent["hero"];
   targetDate: string;
 };
 
@@ -74,7 +74,7 @@ function getCountdownParts(targetDate: string): CountdownParts {
 }
 
 export function CountdownTimer({
-  dictionary,
+  heroContent,
   targetDate,
 }: CountdownTimerProps) {
   const [countdown, setCountdown] = useState<CountdownParts>(() =>
@@ -91,23 +91,23 @@ export function CountdownTimer({
 
   const items = [
     {
-      label: dictionary.hero.monthsLabel,
+      label: heroContent.monthsLabel,
       value: countdown.months,
     },
     {
-      label: dictionary.hero.daysLabel,
+      label: heroContent.daysLabel,
       value: countdown.days,
     },
     {
-      label: dictionary.hero.hoursLabel,
+      label: heroContent.hoursLabel,
       value: countdown.hours,
     },
     {
-      label: dictionary.hero.minutesLabel,
+      label: heroContent.minutesLabel,
       value: countdown.minutes,
     },
     {
-      label: dictionary.hero.secondsLabel,
+      label: heroContent.secondsLabel,
       value: countdown.seconds,
     },
   ];
@@ -115,7 +115,7 @@ export function CountdownTimer({
   return (
     <div className="mt-10">
       <p className="section-label text-[color:var(--color-accent)]">
-        {dictionary.hero.countdownLabel}
+        {heroContent.countdownLabel}
       </p>
 
       <div className="mt-4 grid grid-cols-5 gap-1.5 sm:gap-3">

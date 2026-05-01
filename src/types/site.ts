@@ -7,40 +7,6 @@ export type Dictionary = {
   nav: {
     languageLabel: string;
   };
-  hero: {
-    eyebrow: string;
-    title: string;
-    description: string;
-    primaryCta: string;
-    secondaryCta: string;
-    countdownLabel: string;
-    monthsLabel: string;
-    daysLabel: string;
-    hoursLabel: string;
-    minutesLabel: string;
-    secondsLabel: string;
-  };
-  overview: {
-    label: string;
-    heading: string;
-    description: string;
-  };
-  sections: {
-    storyLabel: string;
-    storyHeading: string;
-    scheduleLabel: string;
-    scheduleHeading: string;
-    routeLabel: string;
-    routeHeading: string;
-    venueLabel: string;
-    venueHeading: string;
-    travelLabel: string;
-    travelHeading: string;
-    faqLabel: string;
-    faqHeading: string;
-    rsvpLabel: string;
-    rsvpHeading: string;
-  };
   common: {
     dayLabel: string;
     timeLabel: string;
@@ -99,9 +65,164 @@ export type Dictionary = {
     submissionError: string;
     backendNotConfigured: string;
   };
+};
+
+export type HomePageContent = {
+  hero: {
+    eyebrow: string;
+    title: string;
+    description: string;
+    primaryCta: string;
+    secondaryCta: string;
+    countdownLabel: string;
+    monthsLabel: string;
+    daysLabel: string;
+    hoursLabel: string;
+    minutesLabel: string;
+    secondsLabel: string;
+  };
+  overview: {
+    label: string;
+    heading: string;
+    description: string;
+  };
+  sections: {
+    storyLabel: string;
+    storyHeading: string;
+    scheduleLabel: string;
+    scheduleHeading: string;
+    routeLabel: string;
+    routeHeading: string;
+    venueLabel: string;
+    venueHeading: string;
+    travelLabel: string;
+    travelHeading: string;
+    faqLabel: string;
+    faqHeading: string;
+    rsvpLabel: string;
+    rsvpHeading: string;
+  };
   footer: {
     note: string;
     credit: string;
+  };
+};
+
+export type PageVisual = {
+  src?: string;
+  alt: string;
+  label: string;
+  tone?: "forest" | "cream" | "sky" | "gold" | "charcoal";
+};
+
+export type FactIcon = {
+  src?: string;
+  alt: string;
+  key: "calendar" | "mountain" | "volcano" | "thermometer";
+};
+
+export type LocationFact = {
+  id: string;
+  text: string;
+  icon: FactIcon;
+};
+
+export type TravelSupportContact = {
+  name: string;
+  phone: string;
+};
+
+export type JourneyInfoItem = {
+  label: string;
+  value: string;
+};
+
+export type JourneyStep = {
+  id: string;
+  stepNumber: string;
+  icon: "plane" | "building" | "takeoff" | "pin" | "car" | "city";
+  title: string;
+  description: string;
+  shortLabel: string;
+  cardText: string;
+  visual: PageVisual;
+  infoItems?: JourneyInfoItem[];
+  assistanceTitle?: string;
+  assistanceDescription?: string;
+  contacts?: TravelSupportContact[];
+  ctaLabel?: string;
+};
+
+export type LodgingOption = {
+  id: string;
+  name: string;
+  price: string;
+  label?: string;
+  distance?: string;
+  location?: string;
+  description: string;
+  href?: string;
+  actionLabel?: string;
+  visual: PageVisual;
+};
+
+export type ExploreOption = {
+  id: string;
+  number: string;
+  title: string;
+  description: string;
+  visual: PageVisual;
+};
+
+export type LocationStayPageContent = {
+  seo: {
+    title: string;
+    description: string;
+  };
+  nav: {
+    backLabel: string;
+  };
+  labels: {
+    overviewBadge: string;
+    journeyHint: string;
+    support: string;
+    lodging: string;
+    activities: string;
+  };
+  hero: {
+    title: string;
+    subtitle: string;
+    metadata: string[];
+    visual: PageVisual;
+  };
+  location: {
+    title: string;
+    description: string;
+    facts: LocationFact[];
+    mapVisual: PageVisual;
+  };
+  arrival: {
+    title: string;
+    intro: string;
+    overviewVisual: PageVisual;
+    steps: JourneyStep[];
+    supportCardTitle: string;
+    supportCardDescription: string;
+  };
+  lodging: {
+    title: string;
+    intro: string;
+    options: LodgingOption[];
+  };
+  explore: {
+    title: string;
+    intro: string;
+    options: ExploreOption[];
+  };
+  closing: {
+    title: string;
+    description: string;
+    buttonLabel: string;
   };
 };
 

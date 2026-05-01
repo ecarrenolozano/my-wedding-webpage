@@ -3,18 +3,23 @@
 import Image from "next/image";
 
 import { siteConfig } from "@/config/site.config";
-import type { Dictionary, Locale } from "@/types/site";
+import type { Dictionary, HomePageContent, Locale } from "@/types/site";
 
 type ScheduleSectionProps = {
   dictionary: Dictionary;
+  content: HomePageContent;
   locale: Locale;
 };
 
-export function ScheduleSection({ dictionary, locale }: ScheduleSectionProps) {
+export function ScheduleSection({
+  dictionary,
+  content,
+  locale,
+}: ScheduleSectionProps) {
   return (
     <section className="mx-auto flex w-full max-w-3xl flex-col items-center px-6 text-center">
       <h2 className="section-title font-serif text-[color:var(--color-foreground)]">
-        {dictionary.sections.scheduleHeading}
+        {content.sections.scheduleHeading}
       </h2>
       <p className="date-display mt-10 text-[color:var(--color-clay)]">
         {siteConfig.event.scheduleDateLabel[locale]}

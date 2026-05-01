@@ -1,13 +1,13 @@
 import { siteConfig } from "@/config/site.config";
-import type { Dictionary, Locale } from "@/types/site";
+import type { HomePageContent, Locale } from "@/types/site";
 
 type EventOverviewSectionProps = {
-  dictionary: Dictionary;
+  content: HomePageContent;
   locale: Locale;
 };
 
 export function EventOverviewSection({
-  dictionary,
+  content,
   locale,
 }: EventOverviewSectionProps) {
   return (
@@ -16,7 +16,7 @@ export function EventOverviewSection({
       id="details"
     >
       <h2 className="section-title mt-4 font-serif text-[color:var(--color-foreground)]">
-        {dictionary.sections.storyHeading}
+        {content.sections.storyHeading}
       </h2>
       <p className="section-intro mt-8 max-w-4xl text-stone-800">
         {siteConfig.event.overview.headline[locale]}
