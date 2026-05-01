@@ -25,8 +25,16 @@ create table if not exists public.rsvp_responses (
   created_at timestamptz not null default timezone('utc', now())
 );
 
+create table if not exists public.project_heartbeat (
+  day date primary key,
+  source text not null default 'github-actions',
+  created_at timestamptz not null default timezone('utc', now()),
+  last_seen_at timestamptz not null default timezone('utc', now())
+);
+
 alter table public.admin_profiles enable row level security;
 alter table public.rsvp_responses enable row level security;
+alter table public.project_heartbeat enable row level security;
 
 drop policy if exists "Los usuarios del panel pueden ver su propio perfil" on public.admin_profiles;
 create policy "Los usuarios del panel pueden ver su propio perfil"

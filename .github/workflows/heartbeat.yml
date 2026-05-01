@@ -1,0 +1,19 @@
+name: Supabase Heartbeat
+
+on:
+  schedule:
+    - cron: "17 11 * * *"
+  workflow_dispatch:
+
+jobs:
+  heartbeat:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Call heartbeat endpoint
+        run: |
+          curl --fail --show-error --silent \
+            -X POST \
+            -H "Authorization: Bearer ${{ secrets.CRON_SECRET }}" \
+            -H "Content-Type: application/json" \
+            "${{ secrets.SITE_URL }}/api/cron/heartbeat"

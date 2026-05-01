@@ -32,3 +32,21 @@ npm run dev
 - Add event overview, schedule, and venue sections
 - Replace placeholder content in `site.config.ts`
 - Build the RSVP flow as a separate multi-step experience
+
+## Supabase heartbeat
+
+This repo includes a daily heartbeat to reduce the risk of Supabase Free pausing the project for inactivity.
+
+Files involved:
+
+- `supabase/schema.sql` adds `public.project_heartbeat`
+- `src/app/api/cron/heartbeat/route.ts` exposes a protected endpoint
+- `.github/workflows/heartbeat.yml` calls that endpoint once per day and also supports manual runs
+
+Required setup:
+
+1. Add `CRON_SECRET` to Vercel environment variables.
+2. Add GitHub Actions secrets:
+   - `SITE_URL` with your production URL, for example `https://your-site.vercel.app`
+   - `CRON_SECRET` with the same exact value used in Vercel
+3. Apply the SQL changes from `supabase/schema.sql` in your Supabase project.
